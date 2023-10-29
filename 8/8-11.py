@@ -7,7 +7,7 @@ def show_messages(text_list,sent_list):
 text_list = ['Hello', 'you', 'are', 'bitch']
 sent_list = []
 
-
+#copy list
 show_messages(text_list[:], sent_list)
 
 print(text_list)
