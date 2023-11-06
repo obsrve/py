@@ -1,0 +1,5 @@
+In Python yo can while
+In Python yo can for
+In Python yo can if
+In Python yo can class
+In Python yo can function

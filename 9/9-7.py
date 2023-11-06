@@ -17,19 +17,14 @@ class User:
     
     def reset_login_attempts(self):
         self.login_attempts = 0
-    
 
+class Admin(User):
+    def __init__(self, first_name, last_name, user_age, user_location):
+        super().__init__(first_name, last_name, user_age, user_location)
+        self.privileges = ['can add post', 'can delete post', 'can bar user']
 
-user1 = User('Vova', 'Shkv', '29', 'Vyshneve')
-#user2 = User('Vlad', 'Vdovitsa', '27', 'Kyiv')
+    def show_privileges(self):
+        print(f'Administrator have next privileges: {self.privileges}')
 
-user1.greet_user()
-user1.describe_user()
-user1.increment_login_attempts()
-user1.increment_login_attempts()
-
-print(f'attempts - {user1.login_attempts}')
-user1.reset_login_attempts()
-print(f'Reset attempts, counter: {user1.login_attempts}')
-#user2.greet_user()
-#user2.describe_user()
+admin = Admin('Vova', 'Shkvarun', '29', 'Vyshnev')
+admin.show_privileges()
